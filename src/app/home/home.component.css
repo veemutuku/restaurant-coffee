@@ -1,0 +1,11 @@
+.banner-text {
+    position: relative;
+    left:100px ;
+    top:100px;
+}
+.btn{
+    margin: 30px 10px 0px 10px;
+}
+h1 {
+    color: coral;
+}

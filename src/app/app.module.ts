@@ -14,7 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustomerComponent } from './customer/customer.component';
 import { TestComponent } from './test/test.component';
-
+import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,11 +28,14 @@ import { TestComponent } from './test/test.component';
     ContactComponent,
     FooterComponent,
     CustomerComponent,
-    TestComponent
+    TestComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

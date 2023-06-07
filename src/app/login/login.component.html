@@ -1,28 +1,77 @@
-<div class="container">
-    <h1>login</h1>
-    <form>
-        <div class="form group">
-            <label for="firstname">firstname</label> <br>
-            <input type="text" name="firstname"class="form control">
+
+<div class="Form">
+    <h1 id="registration">Registration</h1>
+    <form [formGroup]="login" (ngSubmit)="onSubmit()" >
+        <div class="field">
+            <label form="Fname">First Name</label> <br>
+        <input type="text" id="Fname" placeholder="Your name" formControlName="firstname">
+        <div>
+            <span style="color: red;"
+            *ngIf="login.get('firstname').invalid  && login.get('firstname').touched">First name required</span>
         </div>
-        <pre></pre>
-        <div class="form group">
-            <label for="lastname">lastname</label> <br>
-            <input type="text" name="lastname"class="form control">
         </div>
-        <pre></pre>
-        <div class="form group">
-            <label for="email">email</label> <br>
-            <input type="text" name="email"class="form control">
+        <pre> </pre>
+        <div class="field">
+            <label form="lname">Last Name</label><br>
+            <input type="text" id="lname" placeholder="Your last name" formControlName="lastname">
+            <div>
+                <span style="color: red;"
+                *ngIf="login.get('lastname').invalid  && login.get('lastname').touched">lastname required</span>
+            </div>
         </div>
-        <pre></pre>
-        <div class="form group">
-            <label for="password">password</label> <br>
-            <input type="text" name="password"class="form control">
+        <pre> </pre>
+        <div class="field">
+            <label form="Email">Email</label> <br>
+        <input type="text" id="Email" placeholder="Email" formControlName="email">
+        <div>
+            <span style="color: red;"
+            *ngIf="login.get('email').invalid  && login.get('email').touched">Enter email </span>
         </div>
-        <pre></pre>
-        <button class="btn btn-primary"type="submit"> </button>
+    </div>
+        <pre> </pre>
+        <div>
+            <label form="Password">Password</label> <br>
+            <input type="text" id="Password" placeholder="Enter Password" formControlName="password">
+            <div>
+                <span style="color: red;"
+                *ngIf="login.get('password').invalid  && login.get('password').touched">Password </span>
+            </div>
+        </div>
+        <pre> </pre>
+        <div>
+            <label form="CPassword">Confirm Password</label> <br>
+            <input type="text" id="CPassword" placeholder="Confirm Password" formControlName="confirmPassword">
+            <div>
+                <span style="color: red;"
+                *ngIf="login.get('confirmPassword').invalid  && login.get('confirmPassword').touched">invalid password </span>
+            </div>
+        </div>
+        <pre> </pre>
+        <div class="field">
+            <label>Hobbies</label>
+        <div class="form-inline">
+            
+            <label> <input type="checkbox"> Sports</label>
+            
+            <label> <input type="checkbox"> Movies</label>
+            
+            <label> <input type="checkbox"> Cooking</label>
+
+        </div>
+        </div>
+        <pre> </pre>
+        
+       <div class="button">
+        <input type="submit" value="submit" id="btn">
+       </div>
+    
+        
+       
     </form>
+
+</div>
+
 <div>
+    <p>Don't have an account? <a routerLink="">Sign up</a></p>
 
-
+  </div>
